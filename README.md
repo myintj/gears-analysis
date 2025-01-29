@@ -1,1 +1,1 @@
-# analysis-of-gears
+# Gear analysis
