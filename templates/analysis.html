@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Analysis Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Analysis Results</h1>
+        
+        <!-- 3-sentence quick description of what this program does -->
+        <p class="quick-desc">
+            This program compares your gear's sensor data with a no-fault baseline.
+            It generates vibration plots from multiple sensors to detect anomalies.
+            The rolling mean plot highlights broader trends that might otherwise be missed.
+        </p>
+        
+        {% for plot_title, explanation, plot_url in plots %}
+            <div class="plot-section">
+                <h2>{{ plot_title }}</h2>
+                <img src="{{ plot_url }}" alt="Plot" class="plot-image"/>
+                <p class="plot-explanation">{{ explanation }}</p>
+            </div>
+        {% endfor %}
+        
+        <hr>
+        
+        <h2>Data Samples (First 10 Rows)</h2>
+        <div class="table-section">
+            <h3>No-Fault Data (first 10 rows)</h3>
+            {{ no_fault_head|safe }}
+        </div>
+        <div class="table-section">
+            <h3>Uploaded Data (first 10 rows)</h3>
+            {{ uploaded_head|safe }}
+        </div>
+        
+        <p><a href="{{ url_for('index') }}" class="btn">Back to Home</a></p>
+    </div>
+</body>
+</html>
+

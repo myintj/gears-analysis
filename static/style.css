@@ -1,0 +1,109 @@
+html {
+    font-size: 150%;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fafafa;
+}
+
+.container {
+    width: 80%;
+    margin: 40px auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1, h2, h3 {
+    margin-top: 0;
+}
+
+/* Flash message styling (for upload errors, etc.) */
+.flash-messages p {
+    background: #ffecb3;
+    border: 1px solid #ffd54f;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+label {
+    font-weight: bold;
+}
+
+/* Make 'Upload' and 'Analyse' buttons scale with text size (1.5x) */
+.btn {
+    display: inline-block;
+    font-size: 1em;
+    padding: 0.5em 1em;
+    margin-top: 10px;
+    cursor: pointer;
+    background: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background: #0056b3;
+}
+
+/* Scale up the file input (Choose file) and label (No file chosen) ~1.15x */
+input[type="file"] {
+    font-size: 115%;
+}
+
+/* Plot sections */
+.plot-section {
+    margin: 30px 0;
+    text-align: center;
+}
+
+/* Revert plots to default/original size */
+.plot-image {
+    max-width: 100%; /* Image will fill up to the container's width */
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.plot-section h2 {
+    margin-bottom: 10px;
+}
+
+.plot-explanation {
+    font-style: italic;
+    color: #555;
+    max-width: 80%;
+    margin: 10px auto;
+}
+
+/* Table styling */
+table.table {
+    margin-bottom: 20px;
+}
+
+table.table-striped {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table.table-striped th,
+table.table-striped td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+table.table-striped tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.table-section {
+    margin: 20px 0;
+}
+
+
+
