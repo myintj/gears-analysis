@@ -2,6 +2,8 @@
 
 This Flask application lets you compare a user-uploaded gear vibration CSV to a preloaded **no-fault** baseline. It plots each sensor’s vibration data, highlighting potential anomalies or faults. Under each plot, the app provides a short explanation, and it also displays the first 10 rows of both datasets for a quick comparison.
 
+Data from: (https://www.kaggle.com/datasets/hieudaotrung/gear-vibration/data)
+
 ## Project Structure
 
 ```vbnet
