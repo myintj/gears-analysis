@@ -1,27 +1,28 @@
 # Gear Analysis Flask App
 
-This is a Flask-based application that compares user-uploaded gear vibration data against a baseline **no-fault** gear dataset. It helps detect potential gear faults by visualizing vibration signals and highlighting deviations from normal operation.
-
----
+This Flask application lets you compare a user-uploaded gear vibration CSV to a preloaded **no-fault** baseline. It plots each sensor’s vibration data, highlighting potential anomalies or faults. Under each plot, the app provides a short explanation, and it also displays the first 10 rows of both datasets for a quick comparison.
 
 ## Project Structure
 
+```vbnet
+gear-analysis-flask-app/
+├── data/
+│   ├── no_fault.csv
+│   ├── eccentricity.csv
+│   ├── missing_tooth.csv
+│   ├── root_crack.csv
+│   ├── surface_fault.csv
+│   └── tooth_chipped_fault.csv
+├── static/
+│   ├── style.css
+│   └── script.js
+├── templates/
+│   ├── index.html
+│   └── analysis.html
+├── uploads/            (optional, if you store uploaded files on disk)
+├── app.py
+├── requirements.txt
+└── README.md
 
-- **`app.py`** – Main Flask application code.  
-- **`data/`** – Stores the preloaded `no_fault.csv` (and optional fault examples).  
-- **`static/`** – CSS and JavaScript files.  
-- **`templates/`** – HTML templates for Flask routes.  
-- **`uploads/`** – Optional folder if you choose to keep uploaded files instead of just reading them into memory.  
-- **`requirements.txt`** – Lists Python dependencies.
-
----
-
-## Installation & Setup
-
-1. **Clone** this repo or [download the ZIP](https://github.com/your-username/gear-analysis-flask-app/archive/refs/heads/main.zip).
-
-   ```bash
-   git clone https://github.com/your-username/gear-analysis-flask-app.git
-   cd gear-analysis-flask-app
 
 
